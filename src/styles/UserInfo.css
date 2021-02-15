@@ -1,0 +1,18 @@
+.userInfoTitle {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.userInfoList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.userInfoList li {
+  font-size: 1.20rem;
+  padding: 0.2rem;
+}
+
+.userInfoList strong {
+  padding-right: 0.3rem;
+}
