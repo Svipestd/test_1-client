@@ -36,7 +36,7 @@ export const login = ({ username, password }) => async (dispatch) => {
   dispatch(appActions.cleanErrors())
 
   try {
-    const response = await request('/api/auth/login', {}, "POST", { username, password })
+    const response = await request('api/auth/login', {}, "POST", { username, password })
     const data = await response.json();
 
     if (!response.ok) {
@@ -58,7 +58,7 @@ export const register = ({ email, username, password, confirmPassword }) => asyn
   dispatch(appActions.cleanErrors());
 
   try {
-    const response = await request('/api/auth/register', {}, "POST", { email, username, password, confirmPassword })
+    const response = await request('api/auth/register', {}, "POST", { email, username, password, confirmPassword })
     const data = await response.json();
 
     if (!response.ok) {

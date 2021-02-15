@@ -10,7 +10,7 @@ export const request = async (url, token, method = "GET", body = null, headers =
     headers['Content-Type'] = 'application/json';
   }
 
-  const baseUrl = 'https://nameless-savannah-06709.herokuapp.com' + url;
+  const baseUrl = 'https://nameless-savannah-06709.herokuapp.com/' + url;
   
   return await fetch(baseUrl, { method, body, headers });
 }
