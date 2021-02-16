@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { deleteNews } from "../store/newsReducer";
 
-import { Button, Confirm, Popup } from "semantic-ui-react"
+import { Button, Confirm } from "semantic-ui-react"
 
 export const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();
@@ -14,17 +14,13 @@ export const DeleteButton = ({ id }) => {
   const handleDeleteNews = () => {
     dispatch(deleteNews(id, token));
   }
-  
+
   return (
     <>
-      <Popup
-        content={'delete'}
-        trigger={
-          <Button onClick={() => setConfirmOpen(true)}>
-            Delete
-          </Button>
-        }
-      />
+      <Button onClick={() => setConfirmOpen(true)}>
+        Delete
+      </Button>
+
       <Confirm
         open={confirmOpen}
         onCancel={() => setConfirmOpen(false)}
