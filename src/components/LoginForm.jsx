@@ -68,6 +68,12 @@ const LoginForm = () => {
 
       {errors.length > 0 && <Errors errors={errors} /> }
       {requestErrors.length > 0 && <Errors errors={requestErrors} /> }
+
+      <div className='ui info message'>
+        Для быстрого входа:
+        <div>Username: User</div> 
+        <div>Password: 123456</div>
+      </div>
     </>
   )
 }
